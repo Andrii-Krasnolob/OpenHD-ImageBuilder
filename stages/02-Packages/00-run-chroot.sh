@@ -111,7 +111,8 @@ function install_openhd {
         rm -f "$keyring"
         # Add the updated repository to sources.list
         echo "deb [signed-by=/usr/share/keyrings/radxa-archive-keyring.gpg] https://radxa-repo.github.io/bullseye/ bullseye main" | sudo tee -a /etc/apt/sources.list
-        apt update
+        #remove vscode 
+        sudo find /etc/apt/ -type f -exec grep -l 'vscodium' {} + | xargs -r sudo rm && sudo apt update
         install_radxa-debian_packages_rk3566
         apt upgrade -y
     elif [[ "${OS}" == "radxa-debian-rock-cm3-core3566" ]] ; then
