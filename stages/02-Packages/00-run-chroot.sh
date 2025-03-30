@@ -12,7 +12,7 @@ CLEANCLEAN=true
 # X20 specific code
 function install_x20_packages {
     #sudo apt install -y firmware-realtek NEEDS FIXING
-    sudo apt install -y whiptail
+    sudo apt install -y whiptail libpoco-dev
     rm -Rf /etc/apt/sources.list.d/*
     rm -Rf /etc/apt/sources.list
     BASE_PACKAGES="openhd-x20 encode-sunxi openhd-sys-utils rtl8812au-x20"
