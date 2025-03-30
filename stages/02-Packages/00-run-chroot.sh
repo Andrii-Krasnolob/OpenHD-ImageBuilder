@@ -132,6 +132,15 @@ function install_openhd {
         curl -1sLf 'https://dl.cloudsmith.io/public/openhd/release/setup.deb.sh'| sudo -E bash
         if [ -e "/opt/additionalFiles/dev-build" ]; then
             curl -1sLf 'https://dl.cloudsmith.io/public/openhd/dev-release/setup.deb.sh'| sudo -E bash
+            echo "BUILDING DEVELOPMENT IMAGE"
+            echo "BUILDING DEVELOPMENT IMAGE"
+            echo "BUILDING DEVELOPMENT IMAGE"
+            echo "BUILDING DEVELOPMENT IMAGE"
+            echo "BUILDING DEVELOPMENT IMAGE"
+            echo "BUILDING DEVELOPMENT IMAGE"
+            echo "BUILDING DEVELOPMENT IMAGE"
+            echo "BUILDING DEVELOPMENT IMAGE"
+
         fi
         #apt update
 
