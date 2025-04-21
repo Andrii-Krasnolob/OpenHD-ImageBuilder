@@ -114,7 +114,6 @@ function install_openhd {
         #remove vscode 
         sudo find /etc/apt/ -type f -exec grep -l 'vscodium' {} + | xargs -r sudo rm && sudo apt update
         install_radxa-debian_packages_rk3566
-        apt upgrade -y
     elif [[ "${OS}" == "radxa-debian-rock-cm3-core3566" ]] ; then
         apt update
         install_packages-core3566
@@ -169,10 +168,7 @@ function install_openhd {
         fi
     done
     #Cleapup
-    apt autoremove -y
-    if [ "$CLEAN" = true ]; then
-    apt upgrade -y --allow-downgrades
-    fi
+    #apt autoremove -y
     # Install platform-specific packages
     echo "Installing platform-specific packages..."
     for package in ${BASE_PACKAGES} ${PLATFORM_PACKAGES}; do
